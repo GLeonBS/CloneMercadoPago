@@ -1,0 +1,71 @@
+.cabeçalho a {
+    color: gray;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: black;
+}
+
+.entre {
+    color: rgb(33, 134, 250) !important;
+}
+
+.pix {
+    color: rgb(173, 165, 165);
+    font-size: 14px;
+}
+
+.atras {
+    z-index: -99999 !important;
+}
+
+
+.frente {
+    z-index: -999 !important;
+}
+
+.background-image-md {
+    background-image: url("https://http2.mlstatic.com/frontend-assets/home-landing/090913287ecbe814b43a6a1b890df86a.webp");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.background-image {
+    background-image: url("https://http2.mlstatic.com/frontend-assets/home-landing/02647d4b4ba9ed9a9ae8c808ef74e40a.webp");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.caixa {
+    background-color: white;
+}
+
+.txt-bloco {
+    font-size: 15px !important;
+    color: rgb(100, 99, 99);
+}
+
+.final a, .final p{
+    color: gray !important;
+    text-decoration: none;
+    font-size: 13px;
+}
+.final-lg a, .final-lg p{
+    color: gray !important;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.txt-footer a {
+    color: black !important;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.txt-footer a:hover, .final a:hover, .final-lg a:hover {
+    transition: 0.4s;
+    color: rgb(33, 134, 250) !important;
+}
