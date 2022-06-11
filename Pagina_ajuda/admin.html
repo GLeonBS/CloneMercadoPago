@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Atendimento ao cliente  | Mercado Pago Brasil</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light">
+  <!--Main Navigation-->
+  <header class="bg-light">
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-light">
+      <div class="position-sticky ">
+        <div class="list-group list-group-flush mx-3 mt-4">
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3" aria-current="true">
+            <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-house-door"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+            </svg><span class="ps-3">Início</span>
+          </a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg>
+            <span class="ps-3">Seu perfil </span>
+          </a>
+
+          <a href="#" class=" py-2 ripple ps-3 border-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-headset"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+            </svg>
+            <span class="ps-3">Ajuda</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-wallet"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z" />
+            </svg>
+            <span class="ps-3">
+              Seu dinheiro
+            </span>
+          </a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-card-text"
+              viewBox="0 0 16 16">
+              <path
+                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+              <path
+                d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <span class="ps-3">Atividade</span>
+          </a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-bank"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z" />
+            </svg>
+            <span class="ps-3">Open Finance</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3 border-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-box-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+              <path fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+            </svg>
+            <span class="ps-3">Enviar dinheiro</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-piggy-bank"
+              viewBox="0 0 16 16">
+              <path
+                d="M5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm1.138-1.496A6.613 6.613 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 0 0 .286-.958A7.602 7.602 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962z" />
+              <path fill-rule="evenodd"
+                d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595zM2.516 6.26c.455-2.066 2.667-3.733 5.448-3.733 3.146 0 5.536 2.114 5.536 4.542 0 1.254-.624 2.41-1.67 3.248a.5.5 0 0 0-.165.535l.66 2.175h-.985l-.59-1.487a.5.5 0 0 0-.629-.288c-.661.23-1.39.359-2.157.359a6.558 6.558 0 0 1-2.157-.359.5.5 0 0 0-.635.304l-.525 1.471h-.979l.633-2.15a.5.5 0 0 0-.17-.534 4.649 4.649 0 0 1-1.284-1.541.5.5 0 0 0-.446-.275h-.56a.5.5 0 0 1-.492-.414l-.254-1.46h.933a.5.5 0 0 0 .488-.393zm12.621-.857a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199z" />
+            </svg>
+            <span class="ps-3">Receber na sua loja</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-link-45deg"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+              <path
+                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+            </svg>
+            <span class="ps-3">Link de pagamento</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor"
+              class="bi bi-file-earmark-spreadsheet" viewBox="0 0 16 16">
+              <path
+                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h3v2H6zm4 0v-2h3v1a1 1 0 0 1-1 1h-2zm3-3h-3v-2h3v2zm-7 0v-2h3v2H6z" />
+            </svg>
+            <span class="ps-3">Relatórios</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-coin"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+            </svg>
+            <span class="ps-3">Planos de assinatura</span></a>
+
+          <a href="#" class=" list-group-item-action py-2 ripple ps-3 border-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-shop"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+            </svg>
+            <span class="dropdown-toggle ps-3">Seu negócio </span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-arrow-bar-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z" />
+            </svg>
+            <span class="ps-3">Sair </span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-light">
+
+            <div class="row">
+              <div class="col-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-phone"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+              </div>
+              <div class="col">
+                <p class="m-0 ps-3" style="font-size: 10px;">Seu celular é sua nova carteira </p>
+                <p class="m-0 btn-link ps-3" style="font-size: 11px;">Baixe o app</p>
+              </div>
+            </div>
+          </a>
+
+          <a style="font-size: 11px;" href="#" class="pt-3 ps-3 btn-link">
+            Como cuidamos da sua privacidade
+          </a>
+          <a style="font-size: 11px;" href="#" class="ps-3 btn-link">
+            Informações adicionais
+          </a>
+          <a style="font-size: 11px;" href="#" class="ps-3 btn-link">
+            Ouvidoria
+          </a>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top px-3"
+      style="background-color: #2179ec;">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Brand -->
+        <div class="d-none d-md-flex" style="width: 220px;color: white;">
+          <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" fill="currentColor" class="bi bi-person-circle"
+              viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" style="color: white;" />
+              <path fill-rule="evenodd" style="color: white;"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+          </a>
+          <div class="row">
+            <div class="col-12">
+              <p class="my-0" style="font-size: 11px;">Olá Gabriel Leon</p>
+            </div>
+            <div class="col-12">
+              <a href="#" style="font-size: 11px;color: white;">
+                Nível 1 - Mercado de pontos >
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="h5 m-0 ps-2 p-2" style="color: white;">Ajuda</p>
+
+
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+          <!-- Notification dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-bell"
+                viewBox="0 0 16 16">
+                <path style="color: white;"
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  <main style="margin-top: 58px">
+    <div class="container pt-4">
+
+      <!--Section: Minimal statistics cards-->
+      <section class="mx-lg-5 px-lg-5">
+        <div class="row px-lg-5 py-3">
+          <div class="col-12 col-lg-8">
+            <h3>Com o que podemos ajudar?</h3>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="border rounded bg-white">
+              <form class="d-none d-md-flex  w-auto my-auto ">
+                <span class="input-group-text border-0 "><i class="fas fa-search"></i></span>
+                <input autocomplete="off" type="search" class="form-control border-0" placeholder='Buscar'
+                  style="min-width: 225px" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div href="#" class="row pt-5 px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-wallet text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Conta Mercado Pago</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Seu dinheiro: depósitos, transferências,
+                      envios e saques; rendimentos, cartões, tarifas e Open Finance.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div href="#" class="row px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-cash text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Pagamentos</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Compras, pagamentos, tarifas e
+                      assinaturas feitas.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div href="#" class="row px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-tag text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Vendas e ferramentas para vender</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Maquininhas Point, link de pagamento,
+                      código QR e PIX, seus recebimentos, tarifas, etc.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div href="#" class="row px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-credit-card text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Créditos</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Como pedir, usar e pagar as parcelas do
+                      Mercado Crédito</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div href="#" class="row px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-person-fill text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Seu perfil</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Dados, segurança e problemas de acesso
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div href="#" class="row px-lg-5">
+          <div class="col-12 mb-4">
+            <a href="#" class="card" style="color: rgb(92, 91, 91) !important;">
+              <div class="card-body ">
+                <div class="px-md-1 row d-flex ">
+                  <div class="col-1 d-flex align-items-center justify-content-end">
+                    <h4><i class="bi bi-bag-dash text-primary"></i></h4>
+                  </div>
+                  <div class="col py-2">
+                    <h6 style="font-size: 15px;">Outros produtos</h6>
+                    <p class="mb-0 fw-light" style="color: rgb(153, 153, 153);">Seguros para o celular e outros</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="py-5">
+          <h5 class="px-5">Estes tópicos podem ser do seu interesse</h5>
+          <div class="list-group px-5 rounded ">
+            <a href="#" class="list-group-item list-group-item-action py-3">
+              Quais os custos de parcelamento da Point?
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3">Como pagar em lojas físicas</a>
+            <a href="#" class="list-group-item list-group-item-action py-3">Quero alterar meus dados pessoais</a>
+          </div>
+        </div>
+
+        <div class="pb-5">
+          <h5 class="px-5">Precisa de mais alguma ajuda?</h5>
+          <div class="list-group px-5 rounded ">
+            <a href="#" class="list-group-item list-group-item-action py-3">
+              Fale conosco
+            </a>
+          </div>
+        </div>
+
+      </section>
+      <!--Section: Statistics with subtitles-->
+    </div>
+  </main>
+  <!--Main layout-->
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/admin.js"></script>
+
+</body>
+
+</html>
